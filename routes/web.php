@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('home');
 });
+
+
+
+Auth::routes();
+Route::resource('cal', 'CloudCalendarController');
+Route::get('oauth', 'CloudCalendarController@oauth');
