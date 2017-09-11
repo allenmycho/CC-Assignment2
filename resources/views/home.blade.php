@@ -55,7 +55,7 @@
             $('#fullCal').fullCalendar({
 
                 // url
-                events: 'cc-ass2/public/cal'
+                events: 'cal'
 
 
             });
