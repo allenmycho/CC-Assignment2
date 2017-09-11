@@ -45,17 +45,22 @@
 
 
     <div class="row">
-        <div class="col-md-4 col-md-offset-4 text-center">
-            <p class="headingFont">My Calendar</p>
+        <div class="col-md-12">
+            <div id="fullCal"></div>
         </div>
     </div>
 
-    {{--<script>--}}
-    {{--$(document).ready(function() {--}}
-    {{--$("#image1").hide();--}}
-    {{--$("#image1").fadeIn(3000);--}}
-    {{--});--}}
-    {{--</script>--}}
+    <script>
+        $(document).ready(function() {
+            $('#fullCal').fullCalendar({
+
+                // url
+                events: 'cc-ass2/public/cal'
+
+
+            });
+        });
+    </script>
 @endsection
 
 

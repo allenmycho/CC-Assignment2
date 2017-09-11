@@ -20,3 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 Route::resource('cal', 'CloudCalendarController');
 Route::get('oauth', 'CloudCalendarController@oauth');
+
+//Route::get('/events', function() {
+//    return view('events.index');
+//});

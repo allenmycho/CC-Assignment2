@@ -42,7 +42,23 @@ class CloudCalendarController extends Controller
 
 //            $results = $service->events->listEvents($calendarId, $optParams);
             $results = $service->events->listEvents($calendarId);
-            return $results->getItems();
+
+            $events = $results->getItems();
+
+            $data =[];
+            foreach ($events as $event) {
+                $subArray = [
+                    'id' => $event -> id,
+                    'title' => $event -> getSummary(),
+                    'start' => $event -> getStart() -> getDateTime(),
+                    'end' => $event -> getEnd() -> getDateTime()
+                ];
+                array_push($data, $subArray);
+            }
+
+            return $data;
+
+//            return $results->getItems();
         } else {
 //            return redirect()->route('oauthCallback');
             return redirect('/oauth');
