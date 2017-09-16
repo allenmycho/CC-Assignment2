@@ -14,6 +14,7 @@
         $(document).ready(function() {
             $('#fullCal').fullCalendar({
 
+
                 // url
                 events: 'cal',
 
@@ -29,7 +30,7 @@
                     left: 'prev,next today',
                     center: 'title',
                     right: 'month,agendaWeek,agendaDay,listMonth'
-                },
+                }
 
             });
         });
