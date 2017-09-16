@@ -15,7 +15,7 @@
     <script src="{{ asset('js/moment.min.js') }}"></script>
 
     <link rel="stylesheet" href="{{ asset('css/fullcalendar.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/fullcalendar.print.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/fullcalendar.print.min.css') }}" media="print">
     <script src="{{ asset('js/fullcalendar.min.js') }}"></script>
 
 
