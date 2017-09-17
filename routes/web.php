@@ -18,7 +18,7 @@ Route::get('/', function () {
 
 
 Auth::routes();
-Route::resource('cal', 'CloudCalendarController');
+Route::resource('api/calendar', 'CloudCalendarController');
 Route::get('oauth', 'CloudCalendarController@oauth');
 
 //Route::get('/events', function() {
