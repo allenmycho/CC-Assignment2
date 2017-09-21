@@ -7,8 +7,11 @@ function setup() {
     var units = 'units=metric';
 
     var url = api + city + appID + units;
+    console.log(url);
 
     loadJSON(url, printWeather);
+
+    var t = setTimeout(setup, 600000);
 }
 
 function printWeather(weather) {
@@ -16,11 +19,24 @@ function printWeather(weather) {
     // Get the loaded JSON data
     console.log(weather); // inspect the weather JSON
     var main = weather.weather[0].main;
-    var temp = weather.main.temp; // get the main.humidity out of the loaded JSON
+    var temp = parseFloat(weather.main.temp); // get the main.humidity out of the loaded JSON
+    var high = parseFloat(weather.main.temp_max);
+    var low = parseFloat(weather.main.temp_min);
+    var iconId = weather.weather[0].icon;
+
+    var tempRounded = Math.round(temp);
+
+
+
     console.log(temp); // inspect the humidity in the console
     console.log(main);
 
-    document.getElementById('weatherNow').innerHTML = temp + '&deg' + 'C ' + main;
+    document.getElementById('weatherNow').innerHTML = tempRounded + '&deg' + 'C ' + main;
+    document.getElementById('weatherHigh').innerHTML = 'High ' + high + '&deg' + 'C ';
+    document.getElementById('weatherLow').innerHTML = 'Low ' + low + '&deg' + 'C ';
+    document.getElementById('weatherIcon').src = "http://openweathermap.org/img/w/" + iconId + ".png";
+
+
 
 
 }
