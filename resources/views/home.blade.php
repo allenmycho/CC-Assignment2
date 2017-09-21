@@ -3,98 +3,60 @@
 
 
 @section('content')
+    <div class="row">
+        <div class="col-md-2 col-md-offset-1">
+            <div id="clock" style="font-size: 40px"></div>
+        </div>
+        <div class="col-md-3 col-md-offset-6">
+            <div id="weatherNow" style="font-size:40px">
+
+            </div>
+        </div>
+
+    </div>
+
 
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-6 col-md-offset-1">
             <div id="fullCal"></div>
+        </div>
+        <div class="col-md-4">
+            <div class="jumbotron">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
         </div>
     </div>
 
+
+
+
+
+
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#fullCal').fullCalendar({
 
 
                 // url
                 events: 'api/calendar',
 
-                customButtons: {
-                    myCustomBtn: {
-                        text: 'weather',
-                        click: function() {
+                eventClick: function(event, element) {
 
-                            var weather;
-                            var api = 'http://api.openweathermap.org/data/2.5/weather?';
-                            var city = 'q=Melbourne&';
-                            var appID = 'APPID=8c9f87b1916ca231f89f3254eb00c5c4&';
-                            var units = 'units=metric';
+                    event.title = "CLICKED!";
 
-//                            function setup() {
-//                                createCanvas(400,200);
-//                                var url = api + city + appID + units;
-//                                loadJSON(url, gotData);
-//                            }
-//
-//                            function gotData(data) {
-//                                weather = data;
-//                            }
-//
-//                            function draw() {
-//                                background(0);
-//                                if (weather) {
-//                                    var temp = weather.main.temp;
-//                                    var humidity = weather.main.humidity;
-//                                    ellipse(100, 100, temp, temp);
-//                                    ellipse(300, 100, humidity, humidity);
-//                                }
-//
-//
-//                            }
+                    $('#fullCal').fullCalendar('updateEvent', event);
 
-                            var url = api + city + appID + units;
-
-                            window.location.href = url;
-                        }
-                    }
                 },
+
                 header: {
-                    left: 'prev,next today myCustomBtn',
+                    left: 'prev,next today',
                     center: 'title',
                     right: 'month,agendaWeek,agendaDay,listMonth'
-                }
+                },
 
             });
         });
     </script>
-
-    {{--<script>--}}
-        {{--var weather;--}}
-        {{--var api = 'http://api.openweathermap.org/data/2.5/weather?';--}}
-        {{--var city = 'q=Melbourne&';--}}
-        {{--var appID = 'APPID=8c9f87b1916ca231f89f3254eb00c5c4&';--}}
-        {{--var units = 'units=metric';--}}
-
-
-        {{--function setup() {--}}
-            {{--createCanvas(400,200);--}}
-            {{--var url = api + city + appID + units;--}}
-            {{--loadJSON(url, gotData);--}}
-        {{--}--}}
-
-        {{--function gotData(data) {--}}
-            {{--weather = data;--}}
-        {{--}--}}
-
-        {{--function draw() {--}}
-            {{--background(0);--}}
-            {{--if (weather) {--}}
-                {{--var temp = weather.main.temp;--}}
-                {{--var humidity = weather.main.humidity;--}}
-                {{--ellipse(100, 100, temp, temp);--}}
-                {{--ellipse(300, 100, humidity, humidity);--}}
-            {{--}--}}
-        {{--}--}}
-    {{--</script>--}}
 @endsection
 
 

@@ -3,7 +3,6 @@
     <title> @yield('title') </title>
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-{{--    <link rel="stylesheet" href="{{ asset('css/sharedStyle.css') }}">--}}
 
     {{-- font family --}}
     <link href="https://fonts.googleapis.com/css?family=Frijole|Yeseva+One" rel="stylesheet">
@@ -14,13 +13,20 @@
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/moment.min.js') }}"></script>
 
+    {{-- P5 JavaScript library --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+    <script src="{{ asset('js/weather.js') }}"></script>
+    <script src="{{ asset('js/Clock.js') }}"></script>
+
+
+
     <link rel="stylesheet" href="{{ asset('css/fullcalendar.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/fullcalendar.print.min.css') }}" media="print">
     <script src="{{ asset('js/fullcalendar.min.js') }}"></script>
 
 
 </head>
-<body class="backgroundImage">
+<body class="backgroundImage" onload="startTime()">
 @include('shared.navbar')
 <div class="container-fluid">
     @yield('content')

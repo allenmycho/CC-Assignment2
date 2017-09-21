@@ -51,7 +51,8 @@ class CloudCalendarController extends Controller
                     'id' => $event -> id,
                     'title' => $event -> getSummary(),
                     'start' => $event -> getStart() -> getDateTime(),
-                    'end' => $event -> getEnd() -> getDateTime()
+                    'end' => $event -> getEnd() -> getDateTime(),
+                    'summary' => $event
                 ];
                 array_push($data, $subArray);
             }
@@ -77,8 +78,11 @@ class CloudCalendarController extends Controller
         } else {
             $this->client->authenticate($_GET['code']);
             $_SESSION['access_token'] = $this->client->getAccessToken();
-            return redirect()->route('cal.index');
+            return redirect('api/calendar');
+//            return redirect()->route('api/calendar');
+//            return redirect('/');
         }
+
     }
     /**
      * Show the form for creating a new resource.
