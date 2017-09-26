@@ -78,7 +78,7 @@ class CloudCalendarController extends Controller
         } else {
             $this->client->authenticate($_GET['code']);
             $_SESSION['access_token'] = $this->client->getAccessToken();
-            return redirect('api/calendar');
+            return redirect('/');
 //            return redirect()->route('api/calendar');
 //            return redirect('/');
         }
