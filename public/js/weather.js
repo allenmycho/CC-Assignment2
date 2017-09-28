@@ -37,8 +37,6 @@ function weatherForecast(forecast) {
 
     var fdate = forecast.list[6].dt_txt;
 
-    document.getElementById('fdate').innerHTML = fdate;
-
 }
 
 function printWeather(weather) {

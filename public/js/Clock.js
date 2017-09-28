@@ -1,5 +1,3 @@
-
-
 function startTime() {
     var today = new Date();
     var h = today.getHours();
@@ -20,4 +18,3 @@ function startTime() {
 
     var t = setTimeout(startTime, 500);
 }
-

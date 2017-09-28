@@ -15,9 +15,9 @@
 
     {{-- P5 JavaScript library --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
-    <script src="{{ asset('js/weather.js') }}"></script>
-    <script src="{{ asset('js/Clock.js') }}"></script>
-    <script src="{{ asset('js/Calendar.js') }}"></script>
+    <script src="{{ asset('js/weather.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/Clock.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/Calendar.js') }}" type="text/javascript"></script>
 
 
     {{-- FullCalendar --}}
