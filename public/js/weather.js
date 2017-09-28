@@ -23,13 +23,14 @@ function setup() {
 
     var calendar_api = 'http://localhost/cc-ass2/public/api/calendar';
 
+
     loadJSON(calendar_api, retrieveEvents);
 
     var t = setTimeout(setup, 600000);
 }
 
 function retrieveEvents(events) {
-    console.log(events.title);
+    console.log(events);
 }
 
 function weatherForecast(forecast) {

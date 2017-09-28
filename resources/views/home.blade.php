@@ -45,16 +45,29 @@
 
                     $('#fullCal').fullCalendar('updateEvent', event);
 
-                },
+                    var myEvents = $('#fullCal').fullCalendar('clientEvents');
+                    console.log("result: " + myEvents[0].title);
 
+                },
                 header: {
                     left: 'prev,next today',
                     center: 'title',
                     right: 'month,agendaWeek,agendaDay,listMonth'
                 },
 
+
             });
         });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+
+            console.log(checkTheResult);
+        });
+
+
+
     </script>
 @endsection
 
