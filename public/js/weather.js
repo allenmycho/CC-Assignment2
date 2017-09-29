@@ -7,8 +7,18 @@ function setup() {
 
     var url = api + city + appID + units;
     loadJSON(url, printWeather);
+    console.log(url);
 
-    var forecast;
+
+    var t = setTimeout(setup, 600000);
+}
+
+function retrieveEvents(events) {
+    console.log(events);
+    weatherForecast(events);
+}
+
+function weatherForecast(events) {
 
     var forecast_api = 'http://api.openweathermap.org/data/2.5/forecast?';
     var forecast_city = 'q=Melbourne,AU&';
@@ -16,26 +26,14 @@ function setup() {
     var forecast_units = 'units=metric';
 
     var forecast_url = forecast_api + forecast_city + forecast_appID + forecast_units;
-    loadJSON(forecast_url, weatherForecast);
+
+    var forecast = loadJSON(forecast_url);
+
+    console.log(forecast_url);
 
 
-    var events;
-
-    var calendar_api = 'http://localhost/cc-ass2/public/api/calendar';
 
 
-    loadJSON(calendar_api, retrieveEvents);
-
-    var t = setTimeout(setup, 600000);
-}
-
-function retrieveEvents(events) {
-    console.log(events);
-}
-
-function weatherForecast(forecast) {
-
-    var fdate = forecast.list[6].dt_txt;
 
 }
 
@@ -51,18 +49,8 @@ function printWeather(weather) {
 
     var tempRounded = Math.round(temp);
 
-
-
-    console.log(temp); // inspect the humidity in the console
-    console.log(main);
-
-
     document.getElementById('weatherNow').innerHTML = tempRounded + '&deg' + 'C ' + main;
-    document.getElementById('weatherHigh').innerHTML = 'High ' + high + '&deg' + 'C ';
-    document.getElementById('weatherLow').innerHTML = 'Low ' + low + '&deg' + 'C ';
+    document.getElementById('weatherHigh').innerHTML = 'Feels like ' + high + '&deg' + 'C ';
     document.getElementById('weatherIcon').src = "http://openweathermap.org/img/w/" + iconId + ".png";
-
-
-
 
 }

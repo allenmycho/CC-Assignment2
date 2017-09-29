@@ -1,18 +1,17 @@
 $(document).ready(function () {
     $('#fullCal').fullCalendar({
-        
+
         // url
         events: 'api/calendar',
 
+
         eventClick: function(event) {
 
-            event.title = "CLICKED!";
-//
+            var myEvents = $('#fullCal').fullCalendar('clientEvents');
+            retrieveEvents(myEvents);
 
             $('#fullCal').fullCalendar('updateEvent', event);
 
-            var myEvents = $('#fullCal').fullCalendar('clientEvents');
-            console.log("result: " + myEvents[0].title);
 
         },
         header: {
@@ -24,3 +23,6 @@ $(document).ready(function () {
 
     });
 });
+
+
+

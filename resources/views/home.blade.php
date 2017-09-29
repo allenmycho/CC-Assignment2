@@ -17,9 +17,8 @@
             <div id="clock" style="font-size: 40px"></div>
         </div>
         <div class="col-md-3 col-md-offset-6">
-            <div id="weatherHigh"></div>
             <div id="weatherNow" style="font-size:40px"></div>
-            <div id="weatherLow"></div>
+            <div id="weatherHigh"></div>
             <img id="weatherIcon" src="" alt="Weather Icon" height="60" width="60">
         </div>
     </div>
