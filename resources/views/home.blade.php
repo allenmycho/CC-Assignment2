@@ -5,10 +5,6 @@
 @section('content')
     <div class="row">
         <div class="col-md-2 col-md-offset-10">
-            <button class="btn btn-primary">
-                <a href="{{ URL::to('api/calendar') }}"></a>Login
-                {{--<a href="api/calendar"></a>Login--}}
-            </button>
         </div>
     </div>
     <div class="row">

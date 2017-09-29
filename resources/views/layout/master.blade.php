@@ -33,4 +33,20 @@
 </div>
 {{--@include('shared.footer')--}}
 </body>
+
+<script type="text/javascript">
+    var currentTime = new Date().getHours();
+    if (7 <= currentTime && currentTime < 20) {
+        if (document.body) {
+            document.body.background = "{{ asset('images/backgrounds/Background_Day.png') }}";
+        }
+    }
+    else {
+        if (document.body) {
+            document.body.background = "{{ asset('images/backgrounds/Background_Night.jpg') }}";
+        }
+    }
+
+</script>
+
 </html>

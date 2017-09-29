@@ -31,10 +31,6 @@ function weatherForecast(events) {
 
     console.log(forecast_url);
 
-
-
-
-
 }
 
 function printWeather(weather) {
