@@ -13,9 +13,9 @@ function setup() {
     var t = setTimeout(setup, 600000);
 }
 
-function retrieveEvents(events) {
-    console.log(events);
-    weatherForecast(events);
+function retrieveEvents(forecast) {
+    console.log("forecast: " + forecast);
+    // weatherForecast(forecast);
 }
 
 function weatherForecast(events) {
@@ -27,9 +27,7 @@ function weatherForecast(events) {
 
     var forecast_url = forecast_api + forecast_city + forecast_appID + forecast_units;
 
-    var forecast = loadJSON(forecast_url);
-
-    console.log(forecast_url);
+    loadJSON(forecast_url, retrieveEvents);
 
 }
 
