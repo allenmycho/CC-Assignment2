@@ -47,6 +47,6 @@ function printWeather(weather) {
 
     document.getElementById('weatherNow').innerHTML = tempRounded + '&deg' + 'C ' + main;
     document.getElementById('weatherHigh').innerHTML = 'Feels like ' + high + '&deg' + 'C ';
-    document.getElementById('weatherIcon').src = "http://openweathermap.org/img/w/" + iconId + ".png";
+    document.getElementById('weatherIcon').src = "images/icons/" + iconId + ".png";
 
 }
