@@ -25,6 +25,10 @@
         </div>
     </div>
 
+    <div class="col-md-8 col-md-offset-2"><h3>Weather Updates</h3> <br> We don't have any updates right now. Check back
+        later!
+    </div>
+
 
 @endsection
 
