@@ -34,6 +34,6 @@
 <script src="{{ asset('js/Calendar.js') }}" type="text/javascript"></script>
 <script src="{{ asset('js/weather.js') }}" type="text/javascript"></script>
 <script src="{{ asset('js/Helper.js') }}" type="text/javascript"></script>
-<script src="{{ asset('js/Notify.js }}" type="text/javascript"></script>
+<script src="{{ asset('js/Notify.js') }}" type="text/javascript"></script>
 
 </html>
