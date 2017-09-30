@@ -24,12 +24,11 @@
         </div>
     </div>
 
-    <div class="col-md-8 col-md-offset-2">
-        <div id="notification" style="font-size:17px"></div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div id="notification" style="font-size:17px"></div>
+        </div>
     </div>
-
-
-
 @endsection
 
 
