@@ -22,7 +22,7 @@ function getEvents(Events) {
         var weather = anologize(eventDate);
 
         if (weather === "Rain" || weather === "Thunderstorm") {
-            notify(eventName + " on " + eventDayName + " " + date[2], weather);
+            notify(eventName + " on " + eventDayName + " " + date[2], weather, weather.toLowerCase());
         }
 
     }
@@ -64,9 +64,10 @@ function saveForecast(forecast) {
 }
 
 
-function notify(event, weather) {
+function notify(event, weather, icon) {
 
-    var string = "<strong>" + event + "</strong>" + "<br>" + weather + " expected during this event." + "<br><br>";
+    var string = "<img src=\"images/notification_icons/" + icon + ".png" + "\" align=\"left\"/>" + "&nbsp&nbsp&nbsp&nbsp" + "<strong>" + event + "</strong>" +
+        "<br>" + "&nbsp&nbsp&nbsp&nbsp" + weather + " expected during this event." + "<br><br>";
     notifications.push(string);
 }
 
