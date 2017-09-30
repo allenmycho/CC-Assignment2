@@ -23,11 +23,9 @@
 
 </head>
 <body class="backgroundImage" onload="startTime()">
-@include('shared.navbar')
 <div class="container-fluid">
     @yield('content')
 </div>
-{{--@include('shared.footer')--}}
 </body>
 
 <script src="{{ asset('js/Clock.js') }}" type="text/javascript"></script>
