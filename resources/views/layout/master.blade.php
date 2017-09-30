@@ -2,10 +2,6 @@
 <head>
     <title> @yield('title') </title>
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-
-    {{-- font family --}}
-    <link href="https://fonts.googleapis.com/css?family=Frijole|Yeseva+One" rel="stylesheet">
 
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

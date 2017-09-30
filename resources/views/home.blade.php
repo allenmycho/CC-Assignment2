@@ -1,5 +1,5 @@
 @extends('layout.master')
-@section('title', 'home')
+@section('title', 'Smart Calendar')
 
 
 @section('content')
@@ -30,7 +30,6 @@
         </div>
     </div>
 @endsection
-
 
 
 

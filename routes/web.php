@@ -13,13 +13,17 @@
 
 Route::group(['middleware' => 'cors'], function () {
     Route::get('/', function () {
-        return view('home');
+        return view('main');
     });
     Route::get('/calendar', 'CloudCalendarController@index');
+    Route::get('/home', function() {
+        return view('home');
+    });
 });
 
 Auth::routes();
 Route::resource('api/calendar', 'CloudCalendarController');
 Route::get('oauth', 'CloudCalendarController@oauth');
+
 
 
