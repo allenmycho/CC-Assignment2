@@ -18,16 +18,16 @@
             <img id="weatherIcon" src="" alt="Weather Icon" height="60" width="60">
         </div>
     </div>
-
     <div class="row">
         <div class="col-md-6 col-md-offset-3" style="margin-top: 50px">
             <div id="fullCal"></div>
         </div>
     </div>
 
-    <div class="col-md-8 col-md-offset-2"><h3>Weather Updates</h3> <br> We don't have any updates right now. Check back
-        later!
+    <div class="col-md-8 col-md-offset-2">
+        <div id="notification" style="font-size:17px"></div>
     </div>
+
 
 
 @endsection

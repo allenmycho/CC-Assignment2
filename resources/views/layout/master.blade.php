@@ -15,15 +15,11 @@
 
     {{-- P5 JavaScript library --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
-    <script src="{{ asset('js/Clock.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('js/Calendar.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('js/weather.js') }}" type="text/javascript"></script>
 
     {{-- FullCalendar --}}
     <link rel="stylesheet" href="{{ asset('css/fullcalendar.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/fullcalendar.print.min.css') }}" media="print">
     <script src="{{ asset('js/fullcalendar.min.js') }}"></script>
-
 
 </head>
 <body class="backgroundImage" onload="startTime()">
@@ -34,19 +30,10 @@
 {{--@include('shared.footer')--}}
 </body>
 
-<script type="text/javascript">
-    var currentTime = new Date().getHours();
-    if (7 <= currentTime && currentTime < 20) {
-        if (document.body) {
-            document.body.background = "{{ asset('images/backgrounds/Background_Day.png') }}";
-        }
-    }
-    else {
-        if (document.body) {
-            document.body.background = "{{ asset('images/backgrounds/Background_Night.jpg') }}";
-        }
-    }
-
-</script>
+<script src="{{ asset('js/Clock.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/Calendar.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/weather.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/Helper.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/Notify.js }}" type="text/javascript"></script>
 
 </html>

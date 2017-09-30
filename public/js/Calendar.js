@@ -8,7 +8,7 @@ $(document).ready(function () {
         eventClick: function(event) {
 
             var myEvents = $('#fullCal').fullCalendar('clientEvents');
-            retrieveEvents(myEvents);
+            getEvents(myEvents);
 
             $('#fullCal').fullCalendar('updateEvent', event);
 
