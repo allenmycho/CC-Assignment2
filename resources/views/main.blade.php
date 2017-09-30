@@ -39,37 +39,41 @@
 
     <div class="row">
         <div class="col-md-6 col-md-offset-3 text-center">
-            <div id="loginBtn"></div>
+            <div id="loginBtn">
+                <button>
+                    <a href="{{ URL::to('api/calendar') }}" style="text-decoration: none">Login</a>
+                </button>
+            </div>
         </div>
     </div>
 
 
 
-    <script type="text/javascript" src="{{ asset('../node_modules/typed.js/lib/typed.js') }}"></script>
+    {{--<script type="text/javascript" src="{{ asset('../node_modules/typed.js/lib/typed.js') }}"></script>--}}
 
-    <script>
-        var fSentence = new Typed('#fSentence', {
-            stringsElement: '#typed-strings',
-            typeSpeed: 50,
-            backSpeed: 50,
-            showCursor: false,
-            smartBackspace: false,
-            onComplete: function(self) {
-                var loginBtn = document.getElementById("loginBtn");
-                var aTag = document.createElement('a');
-                aTag.setAttribute('href','{{ URL::to('api/calendar') }}');
-                aTag.setAttribute('style',
-                    'color: white;' +
-                    'font-size: 30px;' +
-                    'background-color: gray;' +
-                    'padding: 10px 10px 10px 10px;' +
-                    'border-style: outset;' +
-                    'text-decoration: none');
-                aTag.innerHTML = "Login";
-                loginBtn.appendChild(aTag);
-            },
-        });
-    </script>
+    {{--<script>--}}
+        {{--var fSentence = new Typed('#fSentence', {--}}
+            {{--stringsElement: '#typed-strings',--}}
+            {{--typeSpeed: 50,--}}
+            {{--backSpeed: 50,--}}
+            {{--showCursor: false,--}}
+            {{--smartBackspace: false,--}}
+            {{--onComplete: function(self) {--}}
+                {{--var loginBtn = document.getElementById("loginBtn");--}}
+                {{--var aTag = document.createElement('a');--}}
+                {{--aTag.setAttribute('href','{{ URL::to('api/calendar') }}');--}}
+                {{--aTag.setAttribute('style',--}}
+                    {{--'color: white;' +--}}
+                    {{--'font-size: 30px;' +--}}
+                    {{--'background-color: gray;' +--}}
+                    {{--'padding: 10px 10px 10px 10px;' +--}}
+                    {{--'border-style: outset;' +--}}
+                    {{--'text-decoration: none');--}}
+                {{--aTag.innerHTML = "Login";--}}
+                {{--loginBtn.appendChild(aTag);--}}
+            {{--},--}}
+        {{--});--}}
+    {{--</script>--}}
 
 
 </body>
