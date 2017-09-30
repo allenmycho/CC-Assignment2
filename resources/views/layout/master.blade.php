@@ -34,4 +34,14 @@
 <script src="{{ asset('js/Helper.js') }}" type="text/javascript"></script>
 <script src="{{ asset('js/Notify.js') }}" type="text/javascript"></script>
 
+<footer>
+    <div class="container-fluid" style="margin-top: 50px">
+        <div class="row">
+            <div class="col-lg-12 jumbotron" style="padding: 1.5em;">
+                <div style="text-align: center">&lt;/&gt; with &lt;3 by Alex Fonseka & Minyoung Cho</div>
+            </div>
+        </div>
+    </div>
+</footer>
+
 </html>
