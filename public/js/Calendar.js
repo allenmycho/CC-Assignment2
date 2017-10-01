@@ -1,3 +1,5 @@
+var runnable = true;
+
 $(document).ready(function () {
     $('#fullCal').fullCalendar({
 
@@ -15,8 +17,12 @@ $(document).ready(function () {
         },
 
         eventAfterAllRender: function () {
-            var myEvents = $('#fullCal').fullCalendar('clientEvents');
-            getEvents(myEvents);
+            if (runnable) {
+                var myEvents = $('#fullCal').fullCalendar('clientEvents');
+                getEvents(myEvents);
+                runnable = false;
+            }
+
         }
 
     });
