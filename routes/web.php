@@ -13,7 +13,7 @@
 
 Route::group(['middleware' => 'cors'], function () {
     Route::get('/', function () {
-        return view('main');
+        return redirect('api/calendar');
     });
     Route::get('/calendar', 'CloudCalendarController@index');
     Route::get('/home', function() {
