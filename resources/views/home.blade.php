@@ -1,5 +1,5 @@
 @extends('layout.master')
-@section('title', 'Smart Calendar')
+@section('title', 'Weather Calendar by Alex Fonseka & Minyong Cho')
 
 
 @section('content')
