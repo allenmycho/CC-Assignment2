@@ -4,13 +4,7 @@ $(document).ready(function () {
         // url
         events: 'api/calendar',
 
-
         eventClick: function(event) {
-
-            var myEvents = $('#fullCal').fullCalendar('clientEvents');
-            getEvents(myEvents);
-
-            $('#fullCal').fullCalendar('updateEvent', event);
 
 
         },
@@ -20,6 +14,10 @@ $(document).ready(function () {
             right: 'month,agendaWeek,agendaDay,listMonth'
         },
 
+        eventAfterAllRender: function () {
+            var myEvents = $('#fullCal').fullCalendar('clientEvents');
+            getEvents(myEvents);
+        }
 
     });
 });
