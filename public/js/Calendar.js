@@ -20,6 +20,7 @@ $(document).ready(function () {
             if (runnable) {
                 var myEvents = $('#fullCal').fullCalendar('clientEvents');
                 getEvents(myEvents);
+                //enablePreviewMode();
                 runnable = false;
             }
 

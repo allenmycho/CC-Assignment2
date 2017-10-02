@@ -149,3 +149,17 @@ function displayNotifications() {
         document.getElementById('notification').innerHTML = notifications.join("");
     }
 }
+
+function enablePreviewMode() {
+
+    notifications.push("<strong>Preview mode activated.<br> Displaying test events and weather conditions.<br><br></strong>");
+
+    notify("Test event 1", "Rain", "rain");
+    notify("Test event 2", "Thunderstorm", "thunderstorm");
+    notify("Test event 3", "Strong winds", "wind");
+    notify("Test event 4", "Extreme temperatures", "temperature");
+    notify("Test event 5", "High levels of UV radiation", "uv");
+
+    displayNotifications();
+
+}
