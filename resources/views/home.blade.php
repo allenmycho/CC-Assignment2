@@ -4,10 +4,6 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-2 col-md-offset-10">
-        </div>
-    </div>
-    <div class="row">
         <div class="col-md-2 col-md-offset-1">
             <div id="date" style="font-size: 25px"></div>
             <div id="clock" style="font-size: 40px"></div>

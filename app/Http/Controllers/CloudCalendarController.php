@@ -93,6 +93,7 @@ class CloudCalendarController extends Controller
     {
         return view('calendar.createEvent');
     }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -124,6 +125,7 @@ class CloudCalendarController extends Controller
             return redirect()->route('oauthCallback');
         }
     }
+
     /**
      * Display the specified resource.
      *
@@ -146,6 +148,7 @@ class CloudCalendarController extends Controller
             return redirect()->route('oauthCallback');
         }
     }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -164,6 +167,7 @@ class CloudCalendarController extends Controller
      * @return \Illuminate\Http\Response
      * @internal param int $id
      */
+
     public function update(Request $request, $eventId)
     {
         session_start();
@@ -198,6 +202,7 @@ class CloudCalendarController extends Controller
             return redirect()->route('oauthCallback');
         }
     }
+
     /**
      * Remove the specified resource from storage.
      *

@@ -8,7 +8,6 @@ $(document).ready(function () {
 
         eventClick: function(event) {
 
-
         },
         header: {
             left: 'prev,next today',
@@ -23,9 +22,7 @@ $(document).ready(function () {
                 //enablePreviewMode();
                 runnable = false;
             }
-
         }
-
     });
 });
 
